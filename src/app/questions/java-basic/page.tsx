@@ -34,7 +34,7 @@ export default function JavaBasicPage() {
         </Link>
 
         {questions.map((q) => (
-          <Link key={q.href} href={q.href} className="block" key={q.href}>
+          <Link key={q.href} href={q.href} className="block">
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="flex justify-between items-center mb-3">
                 <h3 className="text-lg font-semibold text-gray-900">
