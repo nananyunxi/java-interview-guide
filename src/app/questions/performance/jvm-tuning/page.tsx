@@ -5,8 +5,8 @@ export default function JvmTuningPage() {
     { q: 'JVM 内存结构？', a: '堆（新生代 + 老年代）、方法区（元空间）、虚拟机栈、本地方法栈、程序计数器' },
     { q: '常见的 GC 算法？', a: '标记 - 清除、标记 - 复制、标记 - 整理、分代收集' },
     { q: '常见的垃圾收集器？', a: 'Serial、ParNew、Parallel、CMS、G1、ZGC' },
-    { q: 'GC 日志如何分析？', a: '开日志→用工具 (GCViewer/GCEasy)→看指标 (Young/Full GC 频率、停顿时间)' },
-    { q: '如何排查 OOM 问题？', a: '留现场 (HeapDump)→分析 (MAT/JVisualVM)→定位→解决' },
+    { q: 'GC 日志如何分析？', a: '开日志 → 用工具 (GCViewer/GCEasy) → 看指标 (Young/Full GC 频率、停顿时间)' },
+    { q: '如何排查 OOM 问题？', a: '留现场 (HeapDump) → 分析 (MAT/JVisualVM) → 定位 → 解决' },
     { q: 'JVM 参数调优？', a: '堆内存 (Xms/Xmx/Xmn)、GC(UseG1GC)、排查 (PrintGC/HeapDump)' },
   ];
 

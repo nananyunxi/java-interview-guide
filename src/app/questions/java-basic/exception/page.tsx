@@ -5,7 +5,7 @@ export default function ExceptionPage() {
     { q: 'Java 异常体系？', a: 'Throwable 分为 Error（错误）和 Exception（异常），Exception 分为 checked 和 unchecked' },
     { q: 'checked 和 unchecked 异常的区别？', a: 'checked 必须捕获或声明，unchecked（RuntimeException）可选处理' },
     { q: 'throw 和 throws 的区别？', a: 'throw 抛出异常对象，throws 声明方法可能抛出的异常类型' },
-    { q: 'try-catch-finally 的执行顺序？', a: 'try→catch→finally，finally 总是执行（除了 System.exit）' },
+    { q: 'try-catch-finally 的执行顺序？', a: 'try → catch → finally，finally 总是执行（除了 System.exit）' },
     { q: 'finally 中有 return 会怎样？', a: 'finally 的 return 会覆盖 try/catch 的 return' },
     { q: '自定义异常如何实现？', a: '继承 Exception 或 RuntimeException，提供构造方法' },
   ];

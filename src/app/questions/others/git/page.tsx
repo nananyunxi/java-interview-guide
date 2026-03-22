@@ -4,7 +4,7 @@ export default function GitPage() {
   const questions = [
     { q: 'Git 常用命令？', a: 'clone、add、commit、push、pull、merge、rebase、cherry-pick' },
     { q: 'merge 和 rebase 的区别？', a: 'merge 保留分支历史，rebase 重写历史使提交线性' },
-    { q: '如何解决冲突？', a: '手动编辑冲突文件→add→commit 完成合并' },
+    { q: '如何解决冲突？', a: '手动编辑冲突文件 → add → commit 完成合并' },
     { q: 'git reset 和 revert 的区别？', a: 'reset 回退提交（改变历史），revert 创建新提交撤销更改（不改变历史）' },
     { q: '什么是 git flow？', a: 'Git 分支管理模型：master、develop、feature、release、hotfix' },
     { q: '如何查看提交历史？', a: 'git log、git log --oneline、git log --graph' },

@@ -7,7 +7,7 @@ export default function ReflectionPage() {
     { q: '如何获取 Class 对象？', a: 'Class.forName()、对象.getClass()、类名.class' },
     { q: '反射的优缺点？', a: '优点：灵活、动态；缺点：性能开销、安全问题、破坏封装' },
     { q: '如何绕过泛型擦除？', a: '通过反射获取泛型参数类型（Field、Method、Constructor 的 GenericType）' },
-    { q: '反射创建对象的步骤？', a: '获取 Class→获取 Constructor→调用 newInstance' },
+    { q: '反射创建对象的步骤？', a: '获取 Class → 获取 Constructor → 调用 newInstance' },
   ];
 
   return (

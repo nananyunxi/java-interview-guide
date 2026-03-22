@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function BeanLifecyclePage() {
   const questions = [
-    { q: 'Spring Bean 的生命周期？', a: '实例 → 属性 → Aware → 前处 → 初始化 → 后处 → 使用 → 销毁' },
+    { q: 'Spring Bean 的生命周期？', a: '实例  →  属性  →  Aware  →  前处  →  初始化  →  后处  →  使用  →  销毁' },
     { q: 'Spring 支持的 Bean 作用域？', a: 'singleton、prototype、request、session、application' },
     { q: 'Spring 的自动装配方式？', a: 'byName、byType、constructor、@Autowired、@Resource' },
     { q: '@Autowired 和@Resource 的区别？', a: 'Autowired 是 Spring 的按类型，Resource 是 JDK 的按名字' },

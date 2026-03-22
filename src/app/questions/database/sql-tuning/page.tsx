@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function SqlTuningPage() {
   const questions = [
-    { q: 'SQL 调优的步骤？', a: '慢查询定位→EXPLAIN 分析→索引优化→SQL 重写→架构优化' },
+    { q: 'SQL 调优的步骤？', a: '慢查询定位 → EXPLAIN 分析 → 索引优化 → SQL 重写 → 架构优化' },
     { q: 'EXPLAIN 结果重点关注什么？', a: 'type（访问类型）、key（使用索引）、rows（扫描行数）、Extra（额外信息）' },
     { q: '索引失效的场景？', a: '最左前缀、函数运算、类型转换、左模糊、OR、负向查询' },
     { q: '如何优化 COUNT 查询？', a: '使用覆盖索引、维护计数表、使用近似值' },

@@ -7,7 +7,7 @@ export default function IoNioPage() {
     { q: '什么是零拷贝？', a: '减少数据在内核态和用户态之间的拷贝次数，提高 IO 效率' },
     { q: 'Netty 是什么？', a: '基于 NIO 的高性能网络框架，封装了 NIO 的复杂性' },
     { q: 'TCP 和 UDP 的区别？', a: 'TCP 面向连接、可靠传输；UDP 无连接、不可靠但更快' },
-    { q: 'TCP 三次握手？', a: 'SYN→SYN+ACK→ACK，建立可靠连接' },
+    { q: 'TCP 三次握手？', a: 'SYN → SYN+ACK → ACK，建立可靠连接' },
   ];
 
   return (
