@@ -1,5 +1,8 @@
+import Link from 'next/link';
+
 export default function SelfIntroductionPage() {
-  const content = `# 面试技巧 - 自我介绍
+  const content = {
+    template: `# 面试技巧 - 自我介绍
 
 ## 通用模板（1-3 分钟）
 
@@ -20,16 +23,6 @@ export default function SelfIntroductionPage() {
 
 ---
 
-## 注意事项
-
-1. **控制时间**：1-3 分钟，不要太长
-2. **突出亮点**：技术栈、项目成果
-3. **量化成果**：用数据说话（性能提升 X%、处理 QPS 等）
-4. **与岗位匹配**：根据 JD 调整重点
-5. **自然流畅**：多练习，不要背诵感太强
-
----
-
 ## 不同经验版本
 
 ### 应届生（1 分钟）
@@ -39,28 +32,126 @@ export default function SelfIntroductionPage() {
 > 面试官好，我叫 XXX，有 X 年 Java 开发经验。目前/之前在 XXX 公司工作，主要负责 XXX 系统。技术栈方面，我精通 Java 并发编程、JVM 调优，熟练使用 Spring Cloud 微服务架构，有 MySQL 分库分表、Redis 集群的实战经验。在 XXX 项目中，我主导了 XXX 模块的重构，将系统 QPS 从 XXX 提升到 XXX。我对贵公司的技术挑战很感兴趣，希望能贡献我的经验。谢谢！
 
 ### 5 年 + 经验（3 分钟）
-> 面试官好，我叫 XXX，有 X 年 Java 开发经验，其中 X 年担任技术负责人。目前在 XXX 公司，负责 XXX 系统的架构设计和团队管理。技术方面，我有丰富的分布式系统设计经验，包括微服务拆分、服务治理、性能优化等。在 XXX 项目中，我带领 X 人团队完成了系统从单体到微服务的重构，支撑了日均 XXX 万的访问量。除了技术，我也注重团队建设和人才培养。我希望能在贵公司发挥我的技术和经验，同时迎接新的挑战。谢谢！
-`;
+> 面试官好，我叫 XXX，有 X 年 Java 开发经验，其中 X 年担任技术负责人。目前在 XXX 公司，负责 XXX 系统的架构设计和团队管理。技术方面，我有丰富的分布式系统设计经验，包括微服务拆分、服务治理、性能优化等。在 XXX 项目中，我带领 X 人团队完成了系统从单体到微服务的重构，支撑了日均 XXX 万的访问量。除了技术，我也注重团队建设和人才培养。我希望能在贵公司发挥我的技术和经验，同时迎接新的挑战。谢谢！`,
+
+    tips: `## 注意事项
+
+1. **控制时间**：1-3 分钟，不要太长
+2. **突出亮点**：技术栈、项目成果
+3. **量化成果**：用数据说话（性能提升 X%、处理 QPS 等）
+4. **与岗位匹配**：根据 JD 调整重点
+5. **自然流畅**：多练习，不要背诵感太强
+
+## 准备要点
+
+### 1. 提前准备
+- 写稿子并熟记
+- 录音练习，调整语速
+- 找朋友模拟面试
+
+### 2. 个性化调整
+- 根据公司业务调整技术栈重点
+- 突出与岗位最匹配的经验
+- 准备多个版本（1 分钟、2 分钟、3 分钟）
+
+### 3. 避免踩坑
+- ❌ 不要说"我学习能力强"（太空洞）
+- ✅ 要说"我用 1 周时间学会了 XXX，并应用到项目中"
+- ❌ 不要贬低前公司
+- ✅ 要客观描述离职原因
+
+## 常见问题
+
+**Q: 请简单介绍一下你自己**
+A: 使用上面的模板，控制在 2 分钟内
+
+**Q: 你为什么离开上一家公司**
+A: 寻求更好的发展机会，与个人职业规划更匹配
+
+**Q: 你的缺点是什么**
+A: 说一个真实的缺点 + 正在改进的措施
+示例："我有时候过于追求完美，导致进度慢。现在我学会了优先级管理，先保证核心功能按时交付。"`,
+  };
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <nav className="mb-6">
-        <Link href="/skills" className="text-blue-600 hover:underline">
-          ← 返回面试技巧
-        </Link>
-      </nav>
-      <article className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          🎯 自我介绍
-        </h1>
-        <div className="prose max-w-none">
-          <pre className="whitespace-pre-wrap text-gray-700 font-sans">
-            {content}
-          </pre>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-teal-50 to-cyan-50">
+      {/* Header */}
+      <header className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-10">
+        <div className="max-w-5xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">
+                🎯 自我介绍
+              </h1>
+              <p className="text-sm text-gray-500 mt-1">面试技巧 · 第一印象</p>
+            </div>
+            <Link href="/skills" className="text-green-600 hover:text-green-700 transition-colors flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              返回面试技巧
+            </Link>
+          </div>
         </div>
-      </article>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-5xl mx-auto px-6 py-8">
+        <div className="space-y-6">
+          {/* Template Section */}
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+            <div className="bg-gradient-to-r from-green-500 to-teal-500 px-6 py-4">
+              <h2 className="text-xl font-bold text-white">📝 通用模板</h2>
+              <p className="text-green-100 text-sm mt-1">适用于大多数面试场景</p>
+            </div>
+            <div className="p-6">
+              <div className="prose max-w-none bg-green-50 rounded-lg p-6 border border-green-100">
+                <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                  {content.template}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tips Section */}
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+            <div className="bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-4">
+              <h2 className="text-xl font-bold text-white">💡 注意事项</h2>
+              <p className="text-amber-100 text-sm mt-1">面试成功的关键要点</p>
+            </div>
+            <div className="p-6">
+              <div className="prose max-w-none bg-amber-50 rounded-lg p-6 border border-amber-100">
+                <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                  {content.tips}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Navigation */}
+        <div className="mt-12 flex justify-center gap-4">
+          <Link href="/skills" className="px-6 py-3 bg-white rounded-xl shadow-md hover:shadow-lg transition-all text-green-600 font-medium flex items-center gap-2">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            返回面试技巧
+          </Link>
+          <Link href="/skills/project-experience" className="px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all font-medium flex items-center gap-2">
+            下一节：项目经验
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t mt-12">
+        <div className="max-w-5xl mx-auto px-6 py-6 text-center text-gray-500 text-sm">
+          <p>© 2026 Java 面试宝典 - 用心整理，助你拿下 Offer 💪</p>
+        </div>
+      </footer>
     </div>
   );
 }
-
-import Link from 'next/link';
