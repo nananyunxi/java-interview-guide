@@ -1,0 +1,66 @@
+export default function SelfIntroductionPage() {
+  const content = `# 面试技巧 - 自我介绍
+
+## 通用模板（1-3 分钟）
+
+### 开场
+> 面试官您好，我叫 XXX，很高兴参加今天的面试。
+
+### 基本信息
+> 我毕业于 XXX 大学 XXX 专业，有 X 年 Java 开发经验。
+
+### 技术栈
+> 我熟悉 Java 核心技术，包括集合、并发、JVM 等；熟练使用 Spring、Spring Boot、Spring Cloud 等框架；有 MySQL、Redis 等数据库的使用和优化经验；了解微服务架构设计。
+
+### 项目经验
+> 在上一家公司，我主要负责 XXX 系统的开发，这个系统采用了 Spring Cloud 微服务架构，我独立负责了 XXX 模块的设计和实现，通过 XXX 优化，将接口响应时间从 XXX 降低到 XXX。
+
+### 结尾
+> 我对贵公司的 XXX 业务很感兴趣，相信我的技术能力和项目经验能够胜任这个岗位。谢谢！
+
+---
+
+## 注意事项
+
+1. **控制时间**：1-3 分钟，不要太长
+2. **突出亮点**：技术栈、项目成果
+3. **量化成果**：用数据说话（性能提升 X%、处理 QPS 等）
+4. **与岗位匹配**：根据 JD 调整重点
+5. **自然流畅**：多练习，不要背诵感太强
+
+---
+
+## 不同经验版本
+
+### 应届生（1 分钟）
+> 面试官好，我叫 XXX，是 XXX 大学计算机专业的应届毕业生。在校期间我系统学习了 Java 编程、数据结构、算法等课程，GPA 专业前 X%。我熟悉 Java 基础和 Spring 框架，做过 XXX 项目（简单描述）。我学习能力强，对技术有热情，希望能加入贵公司成长。谢谢！
+
+### 3-5 年经验（2 分钟）
+> 面试官好，我叫 XXX，有 X 年 Java 开发经验。目前/之前在 XXX 公司工作，主要负责 XXX 系统。技术栈方面，我精通 Java 并发编程、JVM 调优，熟练使用 Spring Cloud 微服务架构，有 MySQL 分库分表、Redis 集群的实战经验。在 XXX 项目中，我主导了 XXX 模块的重构，将系统 QPS 从 XXX 提升到 XXX。我对贵公司的技术挑战很感兴趣，希望能贡献我的经验。谢谢！
+
+### 5 年 + 经验（3 分钟）
+> 面试官好，我叫 XXX，有 X 年 Java 开发经验，其中 X 年担任技术负责人。目前在 XXX 公司，负责 XXX 系统的架构设计和团队管理。技术方面，我有丰富的分布式系统设计经验，包括微服务拆分、服务治理、性能优化等。在 XXX 项目中，我带领 X 人团队完成了系统从单体到微服务的重构，支撑了日均 XXX 万的访问量。除了技术，我也注重团队建设和人才培养。我希望能在贵公司发挥我的技术和经验，同时迎接新的挑战。谢谢！
+`;
+
+  return (
+    <div className="max-w-4xl mx-auto">
+      <nav className="mb-6">
+        <Link href="/skills" className="text-blue-600 hover:underline">
+          ← 返回面试技巧
+        </Link>
+      </nav>
+      <article className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          🎯 自我介绍
+        </h1>
+        <div className="prose max-w-none">
+          <pre className="whitespace-pre-wrap text-gray-700 font-sans">
+            {content}
+          </pre>
+        </div>
+      </article>
+    </div>
+  );
+}
+
+import Link from 'next/link';
