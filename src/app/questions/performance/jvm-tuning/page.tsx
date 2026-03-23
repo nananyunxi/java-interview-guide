@@ -12,31 +12,31 @@ export default function JvmTuningPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <nav className="mb-8">
-          <Link href="/questions/performance" className="text-red-600 hover:text-red-700 transition-colors flex items-center gap-2">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <nav className="mb-6 sm:mb-8">
+          <Link href="/questions/performance" className="text-red-600 hover:text-red-700 transition-colors flex items-center gap-2 min-h-[44px] px-3 py-2 rounded-lg hover:bg-red-50">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            返回性能优化
+            <span className="text-base sm:text-lg font-medium">返回性能优化</span>
           </Link>
         </nav>
         <article className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-          <div className="bg-gradient-to-r from-red-500 to-orange-500 px-8 py-6">
-            <h1 className="text-3xl font-bold text-white">
+          <div className="bg-gradient-to-r from-red-500 to-orange-500 px-6 sm:px-8 py-6 sm:py-8">
+            <h1 className="text-2xl sm:text-3xl font-bold text-white">
               ⚡ JVM 调优面试题
             </h1>
-            <p className="text-red-100 mt-2">性能优化 · GC 调优必备</p>
+            <p className="text-red-100 mt-2 text-sm sm:text-base">性能优化 · GC 调优必备</p>
           </div>
-          <div className="p-8">
-            <div className="space-y-6">
+          <div className="p-4 sm:p-8">
+            <div className="space-y-4 sm:space-y-6">
               {questions.map((item, index) => (
-                <div key={index} className="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4 leading-relaxed">
+                <div key={index} className="border-b border-gray-100 pb-4 sm:pb-6 last:border-0 last:pb-0">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4 leading-relaxed">
                     Q{index + 1}. {item.q}
                   </h3>
-                  <div className="bg-gradient-to-br from-red-50 to-orange-50 p-5 rounded-xl border border-red-100">
-                    <p className="text-gray-700 leading-relaxed">{item.a}</p>
+                  <div className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-5 rounded-xl border border-red-100">
+                    <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{item.a}</p>
                   </div>
                 </div>
               ))}
