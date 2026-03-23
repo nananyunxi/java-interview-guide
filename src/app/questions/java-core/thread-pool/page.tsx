@@ -630,26 +630,26 @@ if (executor.getPoolSize() > 100) {
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-6 py-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 🔥 线程池面试题
               </h1>
-              <p className="text-sm text-gray-500 mt-1">Java 核心 · 并发编程必考</p>
+              <p className="text-xs sm:text-sm text-gray-500 mt-1">Java 核心 · 并发编程必考</p>
             </div>
-            <Link href="/questions/java-core" className="text-indigo-600 hover:text-indigo-700 transition-colors flex items-center gap-2">
+            <Link href="/questions/java-core" className="text-indigo-600 hover:text-indigo-700 transition-colors flex items-center gap-2 min-h-[44px] px-3 py-2 rounded-lg hover:bg-indigo-50">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              返回 Java 核心
+              <span className="text-sm sm:text-base font-medium hidden sm:inline">返回 Java 核心</span>
             </Link>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-5xl mx-auto px-6 py-8">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         <div className="space-y-6">
           {questions.map((item, index) => (
             <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
