@@ -11,29 +11,39 @@ export default function SqlTuningPage() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <nav className="mb-6">
-        <Link href="/questions/database" className="text-blue-600 hover:underline">
-          ← 返回数据库
-        </Link>
-      </nav>
-      <article className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          💾 SQL 调优面试题
-        </h1>
-        <div className="space-y-6">
-          {questions.map((item, index) => (
-            <div key={index} className="border-b border-gray-100 pb-6 last:border-0">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Q{index + 1}. {item.q}
-              </h3>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <p className="text-gray-700">{item.a}</p>
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <nav className="mb-8">
+          <Link href="/questions/database" className="text-cyan-600 hover:text-cyan-700 transition-colors flex items-center gap-2">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            返回数据库
+          </Link>
+        </nav>
+        <article className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+          <div className="bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-6">
+            <h1 className="text-3xl font-bold text-white">
+              💾 SQL 调优面试题
+            </h1>
+            <p className="text-cyan-100 mt-2">数据库优化 · 性能提升必备</p>
+          </div>
+          <div className="p-8">
+            <div className="space-y-6">
+              {questions.map((item, index) => (
+                <div key={index} className="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 leading-relaxed">
+                    Q{index + 1}. {item.q}
+                  </h3>
+                  <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-5 rounded-xl border border-cyan-100">
+                    <p className="text-gray-700 leading-relaxed">{item.a}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </article>
+          </div>
+        </article>
+      </div>
     </div>
   );
 }
