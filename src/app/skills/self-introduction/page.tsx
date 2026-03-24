@@ -89,11 +89,12 @@ export default function SelfIntroductionPage() {
               </h1>
               <p className="text-sm text-gray-500 mt-1">面试技巧 · 第一印象</p>
             </div>
-            <Link href="/skills" className="text-green-600 hover:text-green-700 transition-colors flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/skills" className="text-green-600 hover:text-green-700 transition-colors flex items-center gap-1.5">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              返回面试技巧
+              <span className="hidden sm:inline">返回面试技巧</span>
+              <span className="sm:hidden">返回</span>
             </Link>
           </div>
         </div>
@@ -147,16 +148,18 @@ export default function SelfIntroductionPage() {
         </div>
 
         {/* Footer Navigation */}
-        <div className="mt-12 flex justify-center gap-4">
-          <Link href="/skills" className="px-6 py-3 bg-white rounded-xl shadow-md hover:shadow-lg transition-all text-green-600 font-medium flex items-center gap-2">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+          <Link href="/skills" className="px-5 py-2.5 sm:px-6 sm:py-3 bg-white rounded-xl shadow-md hover:shadow-lg transition-all text-green-600 font-medium flex items-center justify-center gap-1.5">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            返回面试技巧
+            <span className="hidden sm:inline">返回面试技巧</span>
+            <span className="sm:hidden">返回</span>
           </Link>
-          <Link href="/skills/project-experience" className="px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all font-medium flex items-center gap-2">
-            下一节：项目经验
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <Link href="/skills/project-experience" className="px-5 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all font-medium flex items-center justify-center gap-1.5">
+            <span className="hidden sm:inline">下一节：项目经验</span>
+            <span className="sm:hidden">下一节</span>
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
