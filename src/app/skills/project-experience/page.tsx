@@ -99,7 +99,10 @@ export default function ProjectExperiencePage() {
               </h1>
               <p className="text-xs sm:text-sm text-gray-500 mt-0.5 sm:mt-1">面试技巧 · 核心能力</p>
             </div>
-            <Link href="/skills" className="text-blue-600 hover:text-blue-700 transition-colors text-xs sm:text-sm font-medium">
+            <Link href="/skills" className="text-blue-600 hover:text-blue-700 transition-colors inline-flex items-center gap-1 text-xs sm:text-sm font-medium">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
               <span>返回</span>
             </Link>
           </div>
@@ -199,17 +202,11 @@ export default function ProjectExperiencePage() {
 
         {/* Footer Navigation */}
         <div className="mt-12 mb-6 space-y-4 px-4">
-          <Link href="/skills/self-introduction" className="block w-full px-6 py-3.5 bg-white rounded-xl shadow-md hover:shadow-lg transition-all text-blue-600 font-medium text-center text-base flex items-center justify-center gap-2">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
+          <Link href="/skills/self-introduction" className="block w-full px-6 py-3.5 bg-white rounded-xl shadow-md hover:shadow-lg transition-all text-blue-600 font-medium text-center text-base">
             <span>上一节：自我介绍</span>
           </Link>
-          <Link href="/skills/technical-answers" className="block w-full px-6 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all font-medium text-center text-base flex items-center justify-center gap-2">
+          <Link href="/skills/technical-answers" className="block w-full px-6 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all font-medium text-center text-base">
             <span>下一节：技术回答</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
           </Link>
         </div>
       </main>
