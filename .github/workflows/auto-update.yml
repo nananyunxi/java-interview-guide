@@ -1,0 +1,44 @@
+name: Auto Update Content
+
+on:
+  schedule:
+    # 每 5 天运行一次 (UTC 时间)
+    - cron: '0 0 */5 * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run content update script
+        run: |
+          # 如果后续有内容更新脚本，在这里执行
+          # 例如：npm run update-content
+          echo "Content auto-update triggered"
+          echo "No update script configured yet"
+      
+      - name: Commit and push if there are changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: auto update content [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
