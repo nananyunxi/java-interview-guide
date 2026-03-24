@@ -1,4 +1,24 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import React from 'react';
+
+// 字体优化 - 使用 next/font 自动优化加载
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Java 面试宝典 - 全面、易懂、持续更新',
+    template: '%s | Java 面试宝典',
+  },
+  description: 'Java 开发面试宝典，包含面试技巧、面试题目、八股文，按知识点分类，持续更新',
+  keywords: ['Java 面试', '面试题', '八股文', 'Spring', '微服务', '数据库'],
+  manifest: '/manifest.json',
+  themeColor: '#3b82f6',
+};
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -6,14 +26,8 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <html lang="zh-CN">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Java 面试宝典 - 全面、易懂、持续更新</title>
-        <meta name="description" content="Java 开发面试宝典，包含面试技巧、面试题目、八股文，按知识点分类，持续更新" />
-      </head>
-      <body className="min-h-screen bg-gray-50">
+    <html lang="zh-CN" className={inter.variable}>
+      <body className={`min-h-screen bg-gray-50 font-sans`}>
         <header className="bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <nav className="flex justify-between items-center">

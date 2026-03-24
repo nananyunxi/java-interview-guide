@@ -1,4 +1,11 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Java 开发面试宝典 - 全面 · 易懂 · 持续更新',
+  description: '包含面试技巧、高频面试题、八股文解析，涵盖 Java 基础、Spring、微服务、数据库等核心知识点，助你轻松拿下 Offer！',
+  keywords: ['Java 面试', '面试题', '八股文', 'Spring', '微服务', '数据库', 'JVM', '并发编程'],
+};
 
 const categories = [
   { name: '面试技巧', href: '/skills', icon: '🎯', desc: '自我介绍、项目经验、技术回答技巧' },
