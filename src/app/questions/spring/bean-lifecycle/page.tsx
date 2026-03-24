@@ -68,28 +68,6 @@ export default function BeanLifecyclePage() {
           ))}
         </div>
       </main>
-          <div className="p-4 sm:p-6 lg:p-10">
-            <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-              {questions.map((item, index) => (
-                <div key={index} className="border-b border-gray-100 pb-4 sm:pb-6 lg:pb-8 last:border-0 last:pb-0">
-                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 leading-relaxed">
-                    Q{index + 1}. {item.q}
-                  </h3>
-                  <div className="bg-gradient-to-br from-green-50 to-teal-50 p-4 sm:p-5 lg:p-6 rounded-xl border border-green-100 hover:shadow-md transition-all duration-300">
-                    <p className="text-gray-700 leading-relaxed text-sm sm:text-base lg:text-lg">{item.a}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 sm:mt-8 lg:mt-10 pt-4 sm:pt-6 border-t border-gray-100">
-              <div className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-500">
-                <span>💡</span>
-                <span>详细解析请查看源文件：content/spring/bean-lifecycle.md</span>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
     </div>
   );
 }
