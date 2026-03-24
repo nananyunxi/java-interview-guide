@@ -21,15 +21,21 @@ jobs:
         with:
           node-version: '20'
       
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
       - name: Install dependencies
         run: npm ci
       
-      - name: Run content update script
+      - name: Run content update script (Node.js)
+        env:
+          UPDATE_MODE: ${{ vars.UPDATE_MODE || 'demo' }}
+          CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
         run: |
-          # 如果后续有内容更新脚本，在这里执行
-          # 例如：npm run update-content
-          echo "Content auto-update triggered"
-          echo "No update script configured yet"
+          echo "🚀 运行内容更新脚本..."
+          node scripts/fetch-questions.js
       
       - name: Commit and push if there are changes
         run: |
@@ -39,6 +45,7 @@ jobs:
           if ! git diff --staged --quiet; then
             git commit -m "chore: auto update content [skip ci]"
             git push
+            echo "✅ 内容已更新并推送"
           else
-            echo "No changes to commit"
+            echo "ℹ️ 没有新内容需要更新"
           fi
